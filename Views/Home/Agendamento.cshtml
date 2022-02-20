@@ -1,0 +1,37 @@
+@model DadosAg
+@{
+    ViewData["Title"] = "Olá como podemos te ajudar? ";
+}
+<h2>@ViewData["Title"]</h2>
+<h6>Pré Agendamento</h6>
+<form method="post" asp-action="Cadastro">
+    <p>
+        <label asp-for="Nome"> Me informe seu nome? </label>
+        <input asp-for="Nome">
+    </p>
+    <p>
+        <label asp-for="Telefone"> Seu numero de telefone? </label>
+        <input asp-for="Telefone">
+    </p>
+    <p>
+        <label asp-for="Data"> Data:</label>
+        <input asp-for="Data">
+    </p>
+    <p>
+        <label asp-for="Idade">Informe a idade do seu bichinho:</label>
+        <input asp-for="Idade">
+    </p>
+    <p>
+        <label asp-for="Necessidade">Qual sua necessidade?</label>
+        <input asp-for="Necessidade">
+    </p>
+    <p>
+        <label asp-for="Animal"> Animal </label>
+        <select asp-for="Animal">
+        <option value="Cao">Cão</option>
+        <option value="Gato">Gato</option>
+        <option value="Passaro">Passaro</option>
+        </select>
+    </p>
+    <input type="submit" value="Enviar Pedido">
+    </form>

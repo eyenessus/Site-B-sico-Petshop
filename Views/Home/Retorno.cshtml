@@ -1,0 +1,31 @@
+@model List<DadosAg>
+       @{
+    ViewData["Title"] = "Agendamento";
+}
+<h1>@ViewData["Title"]</h1>
+<table border="3" >
+    <tr>
+        <td width=350>Nome 
+        </td>
+        <td width=250>
+            Telefone 
+        </td>
+        <td width=100>
+            Idade 
+        </td>
+        <td width=300>Animal  </td>
+        <td width=1000>Necessidade</td>
+        <td width=100> Data</td>
+        
+    </tr>
+    @foreach (DadosAg item in Model){
+        <tr>
+            <td>@item.Nome</td>
+            <td>@item.Telefone</td>
+            <td>@item.Idade</td>
+            <td>@item.Animal</td>
+            <td>@item.Necessidade</td>
+            <td>@item.Data</td>
+            </tr>
+    }
+</table>
